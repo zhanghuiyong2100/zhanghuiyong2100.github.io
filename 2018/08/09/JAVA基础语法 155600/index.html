@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+
+    
+
+    
+
+    <title>极界</title>
+    <meta name="author" content="John Doe" />
+    <meta name="version" content="1.0.0" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="第二章 JAVA基础语法第一节：标识符、标识符的命名规范、关键字、保留字1.1   什么是标识符1Java对包、类、方法、参数和变量等要素命名时使用的字符序列称为标识符。
+1.2 标识符的命名规则123451. 由字母（含英、中、日、俄等）、数字、下划线（_）和美元符号（$ 音：dollar）组成。2. 不能以数字开头。3. 区分大小写。4. 长度无限制。（一般不要超过15个字符）5. 不能是Java中的保留字和关键字。
+1.3 标识符命名习惯12341. 标识符命名习惯：见名知意。2. 使用驼" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <meta name="baidu-site-verification" content="F0CXvmUgA9" />
+
+    
+    
+    <link rel="icon" href="/favicon.png">
+    
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <div class="app">
+        <header class="header clearfix">
+    <div id="nav" class="nav">
+    <button id="open-panel" class="open-panel"><i class="icon-library"></i></button>
+
+    <nav class="nav-inner">
+
+        
+        
+        <li class="nav-item">
+            <a class="nav-link" href="/">首页</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+            <a class="nav-link" href="/categories/front-end">前端</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+            <a class="nav-link" href="/back-end">后端</a>
+        </li>
+        
+        
+        
+        <li class="nav-item nav-item-tag">
+            <a id="nav-tag" class="nav-link" href="#">标签</a>
+            <div id="nav-tags" class="nav-tag-wrap">
+                <i class="nav-tag-arrow"></i>
+                
+
+            </div>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+            <a class="nav-link" href="/archives">归档</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+            <a class="nav-link" href="/atom.xml">订阅</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+            <a class="nav-link" href="/about">关于</a>
+        </li>
+        
+        
+        
+
+    </nav>
+</div>
+
+    <aside id="aside" class="aside">
+    <div id="aside-mask" class="aside-mask"></div>
+    <div id="aside-inner" class="aside-inner">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit"><i class="icon-search-stroke"></i></button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+
+        
+        
+        
+        
+
+        
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#第二章-JAVA基础语法"><span class="toc-number">1.</span> <span class="toc-text">第二章 JAVA基础语法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#第一节：标识符、标识符的命名规范、关键字、保留字"><span class="toc-number">1.1.</span> <span class="toc-text">第一节：标识符、标识符的命名规范、关键字、保留字</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-1-什么是标识符"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1   什么是标识符</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-标识符的命名规则"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.2 标识符的命名规则</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-标识符命名习惯"><span class="toc-number">1.1.3.</span> <span class="toc-text">1.3 标识符命名习惯</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-4-关键字、关键字"><span class="toc-number">1.1.4.</span> <span class="toc-text">1.4 关键字、关键字</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第二节：-八种基本数据类型"><span class="toc-number">1.2.</span> <span class="toc-text">第二节： 八种基本数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-1-基本数据类型："><span class="toc-number">1.2.1.</span> <span class="toc-text">2.1 基本数据类型：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-基本数据类型的存储"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.2 基本数据类型的存储</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-3-整数型"><span class="toc-number">1.2.3.</span> <span class="toc-text">2.3 整数型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-4-浮点型"><span class="toc-number">1.2.4.</span> <span class="toc-text">2.4 浮点型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-5-字符型"><span class="toc-number">1.2.5.</span> <span class="toc-text">2.5 字符型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-6-布尔类型"><span class="toc-number">1.2.6.</span> <span class="toc-text">2.6 布尔类型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-7-JAVA数据类型总结"><span class="toc-number">1.2.7.</span> <span class="toc-text">2.7 JAVA数据类型总结</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-8-数据类型的转换"><span class="toc-number">1.2.8.</span> <span class="toc-text">2.8 数据类型的转换</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第三节：常量、变量"><span class="toc-number">1.3.</span> <span class="toc-text">第三节：常量、变量</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#3-1常量：常见的数值类型-也称为数据常量"><span class="toc-number">1.3.1.</span> <span class="toc-text">3.1常量：常见的数值类型(也称为数据常量)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-2-变量：-保存程序执行中的数据"><span class="toc-number">1.3.2.</span> <span class="toc-text">3.2 变量： 保存程序执行中的数据</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-3-变量的声明初始化"><span class="toc-number">1.3.3.</span> <span class="toc-text">3.3 变量的声明初始化</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-4-变量的分类"><span class="toc-number">1.3.4.</span> <span class="toc-text">3.4 变量的分类</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-5-局部变量和全局变量的区别"><span class="toc-number">1.3.5.</span> <span class="toc-text">3.5 局部变量和全局变量的区别</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第四节：运算符"><span class="toc-number">1.4.</span> <span class="toc-text">第四节：运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#4-1-运算符的分类"><span class="toc-number">1.4.1.</span> <span class="toc-text">4.1 运算符的分类</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-2-算数运算符"><span class="toc-number">1.4.2.</span> <span class="toc-text">4.2 算数运算符</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-3-赋值运算符"><span class="toc-number">1.4.3.</span> <span class="toc-text">4.3 赋值运算符</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-4-关系运算符"><span class="toc-number">1.4.4.</span> <span class="toc-text">4.4 关系运算符</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-5-逻辑运算符"><span class="toc-number">1.4.5.</span> <span class="toc-text">4.5 逻辑运算符</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-6-字符串连接符"><span class="toc-number">1.4.6.</span> <span class="toc-text">4.6 字符串连接符</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-7-三目运算符"><span class="toc-number">1.4.7.</span> <span class="toc-text">4.7 三目运算符</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-8-表达式"><span class="toc-number">1.4.8.</span> <span class="toc-text">4.8 表达式</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#面试题"><span class="toc-number">1.5.</span> <span class="toc-text">面试题</span></a></li></ol></li></ol>
+        
+    </div>
+</aside>
+
+</header>
+
+        <div id="content" class="content"><article class="article" itemscope itemprop="blogPost">
+    
+    <section class="article-body markdown-body">
+        
+        <h3 id="第二章-JAVA基础语法"><a href="#第二章-JAVA基础语法" class="headerlink" title="第二章 JAVA基础语法"></a>第二章 JAVA基础语法</h3><h4 id="第一节：标识符、标识符的命名规范、关键字、保留字"><a href="#第一节：标识符、标识符的命名规范、关键字、保留字" class="headerlink" title="第一节：标识符、标识符的命名规范、关键字、保留字"></a>第一节：标识符、标识符的命名规范、关键字、保留字</h4><h5 id="1-1-什么是标识符"><a href="#1-1-什么是标识符" class="headerlink" title="1.1   什么是标识符"></a>1.1   什么是标识符</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Java对包、类、方法、参数和变量等要素命名时使用的字符序列称为标识符。</span><br></pre></td></tr></table></figure>
+<h5 id="1-2-标识符的命名规则"><a href="#1-2-标识符的命名规则" class="headerlink" title="1.2 标识符的命名规则"></a>1.2 标识符的命名规则</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. 由字母（含英、中、日、俄等）、数字、下划线（_）和美元符号（$ 音：dollar）组成。</span><br><span class="line">2. 不能以数字开头。</span><br><span class="line">3. 区分大小写。</span><br><span class="line">4. 长度无限制。（一般不要超过15个字符）</span><br><span class="line">5. 不能是Java中的保留字和关键字。</span><br></pre></td></tr></table></figure>
+<h5 id="1-3-标识符命名习惯"><a href="#1-3-标识符命名习惯" class="headerlink" title="1.3 标识符命名习惯"></a>1.3 标识符命名习惯</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1. 标识符命名习惯：见名知意。</span><br><span class="line">2. 使用驼峰式命名：</span><br><span class="line">   类名：单词首字母大写，多个单词组成每个单词首字母大写</span><br><span class="line">   变量名，方法名，参数名: 首字母小写，如果多个单词组成，第一个单词首字母小写，剩下的单词首字母大写</span><br></pre></td></tr></table></figure>
+<h5 id="1-4-关键字、关键字"><a href="#1-4-关键字、关键字" class="headerlink" title="1.4 关键字、关键字"></a>1.4 关键字、关键字</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">关键字：Java中有一些赋予特定的含义，有专门用途的字符串称为关键字（keyword）。全部为小写</span><br><span class="line">保留字：没有定义用途，但保留备用。goto、const</span><br></pre></td></tr></table></figure>
+<h4 id="第二节：-八种基本数据类型"><a href="#第二节：-八种基本数据类型" class="headerlink" title="第二节： 八种基本数据类型"></a>第二节： 八种基本数据类型</h4><h5 id="2-1-基本数据类型："><a href="#2-1-基本数据类型：" class="headerlink" title="2.1 基本数据类型："></a>2.1 基本数据类型：</h5><blockquote>
+<p>布尔型—- boolean</p>
+<p>字符型—- char</p>
+<p>整数型—- byte, short, int, long</p>
+<p>浮点数型—- float, double</p>
+</blockquote>
+<h5 id="2-2-基本数据类型的存储"><a href="#2-2-基本数据类型的存储" class="headerlink" title="2.2 基本数据类型的存储"></a>2.2 基本数据类型的存储</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Java中所有的基本数据类型都有固定的存储范围和所占内存空间的大小，而不受具体操作系统的影响，以保证Java程序的可移植性</span><br></pre></td></tr></table></figure>
+<h5 id="2-3-整数型"><a href="#2-3-整数型" class="headerlink" title="2.3 整数型"></a>2.3 整数型</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Java语言的整型数值默认为int型，如：int i = 3;要声明long型可以加‘l’或‘ L’，如：long  l = 3L;注意:在数值超过int的表述范围时(2147483647),需要加上l/L对long赋值</span><br></pre></td></tr></table></figure>
+<h5 id="2-4-浮点型"><a href="#2-4-浮点型" class="headerlink" title="2.4 浮点型"></a>2.4 浮点型</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Java浮点类型常量有两种表示形式</span><br><span class="line">十进制数形式，必须含有小数点，例如:</span><br><span class="line">3.14       314.0      0.314 </span><br><span class="line">科学记数法形式，如3.14e2      3.14E2      314E2 </span><br><span class="line">Java浮点型常量默认为double型,如要声明一个常量为float型，则需在数字后面加f或F，如：double  d = 3.14; float  f = 3.14f;</span><br></pre></td></tr></table></figure>
+<h5 id="2-5-字符型"><a href="#2-5-字符型" class="headerlink" title="2.5 字符型"></a>2.5 字符型</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">char型数据用来表示通常意义上“字符”</span><br><span class="line">char c = &apos;A&apos;;  char c2= &apos;好&apos;;</span><br><span class="line">Java字符采用Unicode编码，每个字符占两个字节，因而可用十六进制编码形式表示(Unicode是全球语言统一编码)</span><br><span class="line">char  c1 = &apos;\u0061&apos;;//相当于’a’</span><br><span class="line">char c2=97;//ASCII美国标准信息交换码，相当于’a’</span><br><span class="line">Java语言中还允许使用转义字符&apos;\&apos;来将其后的字符转变为其它的含义：</span><br><span class="line">char c2 = &apos;\n&apos;;</span><br></pre></td></tr></table></figure>
+<h5 id="2-6-布尔类型"><a href="#2-6-布尔类型" class="headerlink" title="2.6 布尔类型"></a>2.6 布尔类型</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">boolean类型适于逻辑运算，一般用于程序流程控制 </span><br><span class="line">boolean类型数据只允许取值true或false，不可以用0或非0的整数替代true和false。</span><br><span class="line">示例：</span><br><span class="line">boolean  b = false;</span><br><span class="line">boolean c = true;</span><br></pre></td></tr></table></figure>
+<h5 id="2-7-JAVA数据类型总结"><a href="#2-7-JAVA数据类型总结" class="headerlink" title="2.7 JAVA数据类型总结"></a>2.7 JAVA数据类型总结</h5><h5 id="2-8-数据类型的转换"><a href="#2-8-数据类型的转换" class="headerlink" title="2.8 数据类型的转换"></a>2.8 数据类型的转换</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1. boolean 类型不能转换成任何其它基本数据类型。</span><br><span class="line">2. 自动类型转换：数据类型取值范围小的转为取值范围大的</span><br><span class="line">    byte,short, int,long，float，double</span><br><span class="line">    char-&gt; intlongfloatdouble</span><br><span class="line">    short,char不会互相转换</span><br><span class="line">    byte,short,char三者在计算时会转换成int类型（练习）</span><br><span class="line">3. 强制类型转换：数据类型取值范围大的 转为 取值范围小的. 需要加强制转换符，也就是（要转换的数据类型）。</span><br><span class="line">    long l = 100L;int i = (int)l;</span><br><span class="line">    但有可能造成精度降低或数据溢出，使用时要小心。</span><br></pre></td></tr></table></figure>
+<h4 id="第三节：常量、变量"><a href="#第三节：常量、变量" class="headerlink" title="第三节：常量、变量"></a>第三节：常量、变量</h4><h5 id="3-1常量：常见的数值类型-也称为数据常量"><a href="#3-1常量：常见的数值类型-也称为数据常量" class="headerlink" title="3.1常量：常见的数值类型(也称为数据常量)"></a>3.1常量：常见的数值类型(也称为数据常量)</h5><blockquote>
+<p>整型（int）：123 int</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;   Java语言整型的三种表示形式： </span><br><span class="line">&gt;   十进制整数：如12, -314, 0,8,7。 </span><br><span class="line">&gt;   八进制整数：要求以0开头，如0127表示八进制的127 。</span><br><span class="line">&gt;   十六进制数：要求0x或0X开头，如0x1df3。</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>浮点数(实型) ：3.14 float … 字符：’a’ char 布尔(逻辑)：true、false boolean 字符串String：”a”、”abc”、”hello world”, “” null：表示的引用为空对象</p>
+</blockquote>
+<h5 id="3-2-变量：-保存程序执行中的数据"><a href="#3-2-变量：-保存程序执行中的数据" class="headerlink" title="3.2 变量： 保存程序执行中的数据"></a>3.2 变量： 保存程序执行中的数据</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">变量其实是内存中的一小块区域，使用变量名来访问这块区域。因此，每一个变量使用前必须要先申请(声明)，然后必须进行赋值(填充内容)，才能使用。</span><br></pre></td></tr></table></figure>
+<h5 id="3-3-变量的声明初始化"><a href="#3-3-变量的声明初始化" class="headerlink" title="3.3 变量的声明初始化"></a>3.3 变量的声明初始化</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">变量的声明格式：</span><br><span class="line"> 1. 数据类型  变量名； 变量名 = 变量值；</span><br><span class="line"> 2. 数据类型  变量名 = 变量值；</span><br></pre></td></tr></table></figure>
+<h5 id="3-4-变量的分类"><a href="#3-4-变量的分类" class="headerlink" title="3.4 变量的分类"></a>3.4 变量的分类</h5><ol>
+<li>按所属的数据类型划分：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">基本类型变量：持有原始值。(原始数据类型)</span><br><span class="line">引用类型变量：持有引用值。(某个对象的引用，不是该对象本身)String 字符串</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>按被声明的位置划分：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">局部变量：方法或语句块内部定义的变量</span><br><span class="line">全局变量：方法外部、类的内部定义的变量</span><br></pre></td></tr></table></figure>
+<h5 id="3-5-局部变量和全局变量的区别"><a href="#3-5-局部变量和全局变量的区别" class="headerlink" title="3.5 局部变量和全局变量的区别"></a>3.5 局部变量和全局变量的区别</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. 声明的位置不同：</span><br><span class="line"> 局部变量的作用域就是它所在的方法或语句块</span><br><span class="line"> 全局变量的作用域是整个类体。</span><br><span class="line">2. 是否拥有默认值：</span><br><span class="line"> 全局变量有默认值</span><br><span class="line"> 局部变量没有默认值</span><br></pre></td></tr></table></figure>
+<h4 id="第四节：运算符"><a href="#第四节：运算符" class="headerlink" title="第四节：运算符"></a>第四节：运算符</h4><h5 id="4-1-运算符的分类"><a href="#4-1-运算符的分类" class="headerlink" title="4.1 运算符的分类"></a>4.1 运算符的分类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1.算术运算符：+ 、 - 、 * 、 / 、 % 、 ++ 、 --</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2.赋值运算符：= 、 += 、 -= 、 *= 、 /= 、 %=</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3.关系运算符：&gt; 、 &lt; 、 &gt;= 、 &lt;= 、 == 、 !=</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4.逻辑运算符：! 、 &amp; 、 | 、 ^ 、 &amp;&amp; 、 ||</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5.位运算符：&amp; 、 | 、 ^ 、 ~ 、 &gt;&gt; 、 &lt;&lt; 、 &gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">6.字符串连接运算符：+</span><br></pre></td></tr></table></figure>
+<h5 id="4-2-算数运算符"><a href="#4-2-算数运算符" class="headerlink" title="4.2 算数运算符"></a>4.2 算数运算符</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">//   + 、 - 、 * 、  / 、  % </span><br><span class="line">// 需求 : 三位数   求十位上 的数字</span><br><span class="line">// 123    2 </span><br><span class="line">int a = 123;</span><br><span class="line">int b = a/10%10;</span><br><span class="line">//      123/10 12%10   2 </span><br><span class="line">int c = a%100/10;</span><br><span class="line">// ++ 、 --          </span><br><span class="line">int d = 5;</span><br><span class="line">System.out.println(&quot;d = &quot;+ (d++));// 自身加1 </span><br><span class="line">System.out.println(&quot;d = &quot;+ (d));// 自身加1 </span><br><span class="line">        </span><br><span class="line">int e = d++ + 6;</span><br><span class="line">System.out.println(&quot; =e &quot;+ e);// 自身加1 </span><br><span class="line">// --   放在前面是先自身减一  在参与运算</span><br><span class="line">//     放后面   先参与运算   在自身减一</span><br><span class="line">int f = d-- + 6;</span><br><span class="line">System.out.println(&quot; f =  &quot;+ f);// 自身加1 </span><br><span class="line">byte z = -128;</span><br><span class="line">byte w = --z;// ++  在临界值不会报异常    赋的值实在 取值范围内转圈 </span><br><span class="line">System.out.println(&quot;w=  &quot;+ w);// 自身加1</span><br></pre></td></tr></table></figure>
+<h5 id="4-3-赋值运算符"><a href="#4-3-赋值运算符" class="headerlink" title="4.3 赋值运算符"></a>4.3 赋值运算符</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">int  i = 34;</span><br><span class="line">//i = i + 45;</span><br><span class="line">i+=45;  </span><br><span class="line">i-=45;</span><br><span class="line">        </span><br><span class="line">// i = i -45;</span><br><span class="line">i*=45;</span><br><span class="line">i/=45;</span><br><span class="line">i%=45;      </span><br><span class="line">System.out.println(&quot;i= &quot;+ i);</span><br></pre></td></tr></table></figure>
+<h5 id="4-4-关系运算符"><a href="#4-4-关系运算符" class="headerlink" title="4.4 关系运算符"></a>4.4 关系运算符</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">boolean b = 3&gt;=3; // 关系运算符 最终的结果都是boolean类型的</span><br><span class="line">boolean b2 = 3==2; // == 判断等号两边是否相等  如果相等就是true</span><br><span class="line">boolean b3 = 3!=2; // != 判断等号两边是否不等   如果不等就是true</span><br><span class="line"></span><br><span class="line">System.out.println(b3);</span><br><span class="line">            </span><br><span class="line">int  a = 4;</span><br><span class="line">int c = 5;</span><br><span class="line">boolean b4 = ++a&gt;6 &amp; ++c&gt;3;</span><br><span class="line">System.out.println(a);</span><br><span class="line">System.out.println(c);</span><br><span class="line">// 短路与   如果左边是 false 右边则不再执行</span><br><span class="line">// 短路或    如果左边是true  右边则不再执行    开发中使用比  &amp; 和 |用的多</span><br></pre></td></tr></table></figure>
+<h5 id="4-5-逻辑运算符"><a href="#4-5-逻辑运算符" class="headerlink" title="4.5 逻辑运算符"></a>4.5 逻辑运算符</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">// ==  判断基本数据类型的值 是否相同的   != 判断基本数据类型的值是否不等</span><br><span class="line">// 引用数据类型  equals</span><br><span class="line">boolean flag = i!=34;</span><br><span class="line">System.out.println(&quot;flag = &quot;+ flag);</span><br><span class="line"></span><br><span class="line">boolean  flag2 = false&amp;false;// &amp; 必须是左右两边都是   true 结果才是true   </span><br><span class="line">boolean  a =  false | false;// |  只要有一个true 结果就是true 两边都是false 结果才为false</span><br><span class="line"></span><br><span class="line">System.out.println(&quot;flag2 = &quot;+ flag2);</span><br><span class="line">System.out.println(&quot;a = &quot;+ a);</span><br><span class="line"></span><br><span class="line">// &amp;&amp;  ||  有可能有一部分是执行不到的</span><br><span class="line">    </span><br><span class="line">// &amp;&amp; 左边如果是 false 就不执行右边  最终结果是false</span><br><span class="line">// || 左边是true 不用执行右边了   最终结果就是 true</span><br><span class="line"></span><br><span class="line">int z = 5;</span><br><span class="line">int w = 5;</span><br><span class="line">boolean b = ++z&gt;5 || ++w &gt;5;// w 并没有被执行</span><br><span class="line">System.out.println(&quot;b = &quot;+ b+&quot; z=&quot;+z+&quot; w=&quot;+w);</span><br><span class="line"></span><br><span class="line">// !  非   反</span><br><span class="line">boolean e = !true;</span><br><span class="line">System.out.println(&quot;e = &quot;+ e);</span><br><span class="line"></span><br><span class="line">// ^ 异或    相同则为false  不同为true</span><br><span class="line">boolean  f = true ^ false;</span><br><span class="line">System.out.println(&quot;f = &quot;+ f);</span><br></pre></td></tr></table></figure>
+<h5 id="4-6-字符串连接符"><a href="#4-6-字符串连接符" class="headerlink" title="4.6 字符串连接符"></a>4.6 字符串连接符</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(&quot;Hello&quot;+&quot;World!&quot;);</span><br><span class="line">System.out.println(&quot;Hello = &quot;+ 5);// 字符串和基本数据类型变量 常量连接以后 都变成了 字符串</span><br><span class="line">System.out.println(&quot;Hello = &quot;+ 5+ 8);</span><br><span class="line">System.out.println(5+&quot;&quot;);</span><br></pre></td></tr></table></figure>
+<h5 id="4-7-三目运算符"><a href="#4-7-三目运算符" class="headerlink" title="4.7 三目运算符"></a>4.7 三目运算符</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line">//X ? Y : Z</span><br><span class="line">// 1 X 必须是boolean类型表达式</span><br><span class="line">// 2  Y Z 必须数据类型保持一致</span><br><span class="line"></span><br><span class="line">// 执行顺序</span><br><span class="line">// 先执行X    true  执行  Y  </span><br><span class="line">//           false   执行 Z</span><br><span class="line">        </span><br><span class="line">int score = 99;</span><br><span class="line">//boolean falg = score&gt;80;</span><br><span class="line">String str = score&gt;80? &quot;非常优秀&quot; : &quot;优秀&quot;;</span><br><span class="line">char c = &apos;男&apos;;</span><br><span class="line">int i = c==&apos;男&apos;? 5 : (int)(4.0);</span><br><span class="line">//  y 和  z  最好是保持数据类型一致</span><br><span class="line">//   如果不一致  也必须保证 接收的  变量能够存储  y和  z的 数据类型</span><br><span class="line">        </span><br><span class="line">System.out.println(i);</span><br><span class="line">// 需求: 大于90   非常优秀         大于等于60  及格     小于60  集训努力</span><br><span class="line">String str2 = score&gt;90?&quot;非常优秀&quot;:score&gt;=60?&quot;及格&quot;:&quot;下个班见&quot;;</span><br><span class="line">System.out.println(str2);</span><br></pre></td></tr></table></figure>
+<h5 id="4-8-表达式"><a href="#4-8-表达式" class="headerlink" title="4.8 表达式"></a>4.8 表达式</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">表达式是符合一定语法规则的运算符和操作数的序列 </span><br><span class="line">      </span><br><span class="line">            0 !**= **i % 10，a = 0, a==0      </span><br><span class="line">            5.0 + a      </span><br><span class="line">            (a - b) * c - 4      </span><br><span class="line">            i &lt; 30 &amp;&amp; i % 10 != 0 </span><br><span class="line">      </span><br><span class="line">表达式的类型和值</span><br><span class="line">对表达式中操作数进行运算得到的结果称为表达式的值</span><br></pre></td></tr></table></figure>
+<h4 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. 如何不借助第三个变量，交换两个数据</span><br><span class="line">1） </span><br><span class="line">a=b-a;</span><br><span class="line">b=b-a;</span><br><span class="line">a=b+a;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">2. char型变量中能不能存贮一个中文汉字?为什么?</span><br><span class="line">* char型变量是用来存储Unicode编码的字符的，unicode编码字符集中包含了汉字，</span><br><span class="line"> * 所以，char型变量中当然可以存储汉字啦。不过，如果某个特殊的汉字没有被包含在</span><br><span class="line"> * unicode编码字符集中，那么，这个char型变量中就不能存储这个特殊汉字。补充</span><br><span class="line"> * 说明：unicode编码占用两个字节，所以，char类型的变量也是占用两个字节。</span><br><span class="line">3. String是最基本的数据类型吗？</span><br></pre></td></tr></table></figure>
+        
+    </section>
+</article>
+
+
+
+<div class="comments">
+    <div id="disqus_thread">
+        <p class="comment-tips">国内查看评论需要代理~</p>
+    </div>
+    <script>
+    window.disqus_config = function () {
+        this.language = 'zh';
+        this.page.url = 'http://yoursite.com/2018/08/09/JAVA基础语法 155600/';
+        this.page.title = '';
+        this.page.identifier = '2018/08/09/JAVA基础语法 155600/';
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://name.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+</div>
+        <footer class="footer">
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, Theme by <a href="https://github.com/sanonz/hexo-theme-concise" target="_blank">Concise</a>
+</footer>
+
+<script type="text/javascript" src="//s13.cnzz.com/z_stat.php?id=1234567890&amp;web_id=1234567890"></script>
+
+
+    </div>
+
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.9.0/jquery.min.js"></script>
+    
+    <script type="text/javascript" src="/js/scrollspy.min.js"></script>
+    
+    <script type="text/javascript">
+        $(function() {
+            var nodes = {
+                nav: $('#nav'),
+                aside: $('#aside'),
+                navTags: $('#nav-tags')
+            };
+
+            $('#open-panel, #aside-mask').on('click', function() {
+                nodes.aside.toggleClass('panel-show');
+            });
+            $('#nav-tag').on('click', function(event) {
+                event.preventDefault();console.log(nodes.navTags.attr('class'))
+                nodes.navTags.toggleClass('tag-show');console.log(nodes.navTags.attr('class'))
+            })/*.hover(function() {
+                nodes.navTags.addClass('tag-show');
+            }, function() {
+                nodes.navTags.removeClass('tag-show');
+            });*/
+
+            
+            $(document.body).scrollspy({target: '#aside-inner'});
+            
+        });
+    </script>
+
+</body>
+</html>

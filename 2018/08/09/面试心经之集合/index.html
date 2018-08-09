@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+
+    
+
+    
+
+    <title>极界</title>
+    <meta name="author" content="John Doe" />
+    <meta name="version" content="1.0.0" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="面试心经之集合前言：以前虽然有总结过，但是由于时间有点长，而且也不是很系统，所以特用面试的语言再次总结下。
+1. 集合  为自由而生Java集合类存放于 java.util 包中，是一个用来存放对象的容器。
+注意：①、集合只能存放对象。比如你存一个 int 型数据 1放入集合中，其实它是自动转换成 Integer 类后存入的，Java中每一种基本类型都有对应的引用类型。②、集合存放的是多个对象的引用，对象本身还是放在堆内存中。③、集合可以存放不同类型，不限数量的数据类型。
+2.集合核心： 两大接" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <meta name="baidu-site-verification" content="F0CXvmUgA9" />
+
+    
+    
+    <link rel="icon" href="/favicon.png">
+    
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <div class="app">
+        <header class="header clearfix">
+    <div id="nav" class="nav">
+    <button id="open-panel" class="open-panel"><i class="icon-library"></i></button>
+
+    <nav class="nav-inner">
+
+        
+        
+        <li class="nav-item">
+            <a class="nav-link" href="/">首页</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+            <a class="nav-link" href="/categories/front-end">前端</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+            <a class="nav-link" href="/back-end">后端</a>
+        </li>
+        
+        
+        
+        <li class="nav-item nav-item-tag">
+            <a id="nav-tag" class="nav-link" href="#">标签</a>
+            <div id="nav-tags" class="nav-tag-wrap">
+                <i class="nav-tag-arrow"></i>
+                
+
+            </div>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+            <a class="nav-link" href="/archives">归档</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+            <a class="nav-link" href="/atom.xml">订阅</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+            <a class="nav-link" href="/about">关于</a>
+        </li>
+        
+        
+        
+
+    </nav>
+</div>
+
+    <aside id="aside" class="aside">
+    <div id="aside-mask" class="aside-mask"></div>
+    <div id="aside-inner" class="aside-inner">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit"><i class="icon-search-stroke"></i></button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+
+        
+        
+        
+        
+
+        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#面试心经之集合"><span class="toc-number">1.</span> <span class="toc-text">面试心经之集合</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-集合-为自由而生"><span class="toc-number">1.1.</span> <span class="toc-text">1. 集合  为自由而生</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-集合核心：-两大接口三小类型八门集合"><span class="toc-number">1.2.</span> <span class="toc-text">2.集合核心： 两大接口三小类型八门集合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Map接口-key-value-的键值对，key-不允许重复，value-可以"><span class="toc-number">1.3.</span> <span class="toc-text">3 Map接口  key-value 的键值对，key 不允许重复，value 可以</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-HashMap-数组-链表结构，HashMap是无序"><span class="toc-number">1.3.1.</span> <span class="toc-text">3.1 HashMap (数组+链表结构，HashMap是无序)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-LinkedHashMap-继承于HashMap"><span class="toc-number">1.3.2.</span> <span class="toc-text">3.2 LinkedHashMap 继承于HashMap</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-TreeMap"><span class="toc-number">1.3.3.</span> <span class="toc-text">3.3 TreeMap</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-list集合"><span class="toc-number">1.4.</span> <span class="toc-text">4 list集合</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1-ArrayList-动态数组"><span class="toc-number">1.4.1.</span> <span class="toc-text">4.1  ArrayList  动态数组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2-LinkedList-双向链表"><span class="toc-number">1.4.2.</span> <span class="toc-text">4.2 LinkedList(双向链表)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-vector"><span class="toc-number">1.4.3.</span> <span class="toc-text">4.3  vector</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-set集合"><span class="toc-number">1.5.</span> <span class="toc-text">5  set集合</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-1-heshSet"><span class="toc-number">1.5.1.</span> <span class="toc-text">5.1 heshSet</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-2-TreeSet"><span class="toc-number">1.5.2.</span> <span class="toc-text">5.2 TreeSet</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#面试问题"><span class="toc-number">1.6.</span> <span class="toc-text">面试问题</span></a></li></ol></li></ol>
+        
+    </div>
+</aside>
+
+</header>
+
+        <div id="content" class="content"><article class="article" itemscope itemprop="blogPost">
+    
+    <section class="article-body markdown-body">
+        
+        <h2 id="面试心经之集合"><a href="#面试心经之集合" class="headerlink" title="面试心经之集合"></a>面试心经之集合</h2><p>前言：以前虽然有总结过，但是由于时间有点长，而且也不是很系统，所以特用面试的语言再次总结下。</p>
+<h3 id="1-集合-为自由而生"><a href="#1-集合-为自由而生" class="headerlink" title="1. 集合  为自由而生"></a>1. 集合  为自由而生</h3><p>Java集合类存放于 java.util 包中，是一个用来存放对象的容器。</p>
+<p>注意：①、集合只能存放对象。比如你存一个 int 型数据 1放入集合中，其实它是自动转换成 Integer 类后存入的，Java中每一种基本类型都有对应的引用类型。②、集合存放的是多个对象的引用，对象本身还是放在堆内存中。③、集合可以存放不同类型，不限数量的数据类型。</p>
+<h3 id="2-集合核心：-两大接口三小类型八门集合"><a href="#2-集合核心：-两大接口三小类型八门集合" class="headerlink" title="2.集合核心： 两大接口三小类型八门集合"></a>2.集合核心： 两大接口三小类型八门集合</h3><p>两大接口（(Iterator被collection继承)collection接口和map接口）三小类型（map,list,set三种核心集合接口）八门集合（list(ArrayList集合,vector集合(stack继承),linkedlist集合)，set(heshSet集合(LinkedhashSet集合)，treeSet集合)，hashMap集合（LinkedHashMap集合），HashTable集合(propetties集合)，TreeMap集合）</p>
+<h3 id="3-Map接口-key-value-的键值对，key-不允许重复，value-可以"><a href="#3-Map接口-key-value-的键值对，key-不允许重复，value-可以" class="headerlink" title="3 Map接口  key-value 的键值对，key 不允许重复，value 可以"></a>3 Map接口  key-value 的键值对，key 不允许重复，value 可以</h3><p>1、严格来说 Map 并不是一个集合，而是两个集合之间 的映射关系。</p>
+<p>2、这两个集合每一条数据通过映射关系，我们可以看成是一条数据。即 Entry(key,value）。Map 可以看成是由多个 Entry 组成。</p>
+<p>3、因为 Map 集合即没有实现于 Collection 接口，也没有实现 Iterable 接口，所以不能对 Map 集合进行 for-each 遍历。</p>
+<h4 id="3-1-HashMap-数组-链表结构，HashMap是无序"><a href="#3-1-HashMap-数组-链表结构，HashMap是无序" class="headerlink" title="3.1 HashMap (数组+链表结构，HashMap是无序)"></a>3.1 HashMap (数组+链表结构，HashMap是无序)</h4><p>​        HashMap由数组+链表组成的，数组是HashMap的主体，链表则是主要为了解决哈希冲突而存在的，出于性能考虑HashMap中的链表出现越少，性能才会越好。</p>
+<h4 id="3-2-LinkedHashMap-继承于HashMap"><a href="#3-2-LinkedHashMap-继承于HashMap" class="headerlink" title="3.2 LinkedHashMap 继承于HashMap"></a>3.2 LinkedHashMap 继承于HashMap</h4><p>​        HashMap和双向链表合二为一即是LinkedHashMap。所谓LinkedHashMap，其落脚点在HashMap，因此更准确地说，它是一个将所有Entry节点链入一个双向链表双向链表的HashMap。并且LinkedHashMap是有序的，HashMap是无序。</p>
+<h4 id="3-3-TreeMap"><a href="#3-3-TreeMap" class="headerlink" title="3.3 TreeMap"></a>3.3 TreeMap</h4><p>​      TreeMap基于红黑树（Red-Black tree）实现。该映射根据其键的自然顺序进行排序，或者根据创建映射时提供的 Comparator 进行排序，具体取决于使用的构造方法。此实现不是同步的。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">可参考:https:<span class="comment">//www.cnblogs.com/skywang12345/p/3310928.html#a1</span></span><br></pre></td></tr></table></figure>
+<h3 id="4-list集合"><a href="#4-list集合" class="headerlink" title="4 list集合"></a>4 list集合</h3><h4 id="4-1-ArrayList-动态数组"><a href="#4-1-ArrayList-动态数组" class="headerlink" title="4.1  ArrayList  动态数组"></a>4.1  ArrayList  动态数组</h4><p>​     ArrayList就是动态数组，用MSDN中的说法，就是Array的复杂版本，它提供了动态的增加和减少元素，实现了Collection和List接口，可以灵活的设置数组的大小。要注意的是ArrayList并不是线程安全的，因此一般建议在单线程中使用ArrayList。</p>
+<h4 id="4-2-LinkedList-双向链表"><a href="#4-2-LinkedList-双向链表" class="headerlink" title="4.2 LinkedList(双向链表)"></a>4.2 LinkedList(双向链表)</h4><p>LinkedLis类是List接口的链接列表实现。实现所有可选的列表操作，并且允许所有元素（包括null）。<br>存储特点：<br>相对有序存储，可以存储相同元素（不排重），可以通过下标访问集合元素，通过链表实现的集合，LinkedList集合适用在对元素插入和删除操作较频繁的时候，ArrayList集合适用在对元素查询操作较频繁的时候</p>
+<h4 id="4-3-vector"><a href="#4-3-vector" class="headerlink" title="4.3  vector"></a>4.3  vector</h4><p>​      Vector类可以实现可增长的对象数组。与数组一样，它包含可以使用整数索引进行访问的组件。但是Vector的大小可以根据需要增大或缩小，以适应创建 Vector后进行添加或移除项的操作。</p>
+<h3 id="5-set集合"><a href="#5-set集合" class="headerlink" title="5  set集合"></a>5  set集合</h3><h4 id="5-1-heshSet"><a href="#5-1-heshSet" class="headerlink" title="5.1 heshSet"></a>5.1 heshSet</h4><p>​      实现了Set接口，HashSet依赖的数据结构是哈希表，因为实现的是Set接口，所以不允许有重复的值<br>插入到HashSet中的对象不保证与插入的顺序保持一致。对象的插入是根据它的hashcode，HashSet中允许有NULL值，HashSet也实现了Searlizable和Cloneable两个接口。</p>
+<h4 id="5-2-TreeSet"><a href="#5-2-TreeSet" class="headerlink" title="5.2 TreeSet"></a>5.2 TreeSet</h4><p>​        Java中的TreeSet是Set的一个子类，TreeSet集合是用来对象元素进行排序的,同样他也可以保证元素的唯一。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">需要在实体类中定义才会实现排序。</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compareTo</span><span class="params">(Person o)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> num = <span class="keyword">this</span>.age - o.age;                <span class="comment">//年龄是比较的主要条件</span></span><br><span class="line">        <span class="keyword">return</span> num == <span class="number">0</span> ? <span class="keyword">this</span>.name.compareTo(o.name) : num;<span class="comment">//姓名是比较的次要条件</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="面试问题"><a href="#面试问题" class="headerlink" title="面试问题"></a>面试问题</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>.ArrayList与LinkedList的区别</span><br><span class="line">答：ArrayList是数组结构，LinkedList是链表结构，ArrayList查询快，插入和删除慢，LinkedList查询慢，插入和删除快。</span><br><span class="line"><span class="number">2</span>.Stack的存储特点是什么：</span><br><span class="line">后进先出，Vector的子类</span><br><span class="line"><span class="number">3</span>.简述HashSet和LinkedHashSet之间的区别：</span><br><span class="line">HashSet是可以不可重复，无序，可以为<span class="keyword">null</span>的set集合，LinkedHashSet是有序，不可重复，不可为<span class="keyword">null</span>。</span><br><span class="line">HashSet使用哈希表实现的，元素是无序的。添加、删除操作时间复杂度都是O(<span class="number">1</span>)。TreeSet内部结构是一个树结构(红黑树)，元素是有序的，添加、删除操作时间复杂度为O(log(n))，并且提供了first(), last(), headSet(), tailSet()等方法来处理有序集合。</span><br><span class="line">LinkedHashSet是介于HashSet 和 TreeSet之间，内部是一个双向链表结构，所以它的插入是有序的，时间复杂度是O(<span class="number">1</span>)。</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>ArrayList 与 LinkedList 区别 ?</strong><ol>
+<li>存储结构上 ArrayList 底层使用数组进行元素的存储，LinkedList 使用双向链表作为存储结构。</li>
+<li>两者均与允许存储 null 也允许存储重复元素。</li>
+<li>在性能上 ArrayList 在存储大量元素时候的增删效率 平均低于 LinkedList，因为 ArrayList 在增删的是需要拷贝元素到新的数组，而 LinkedList 只需要将节点前后指针指向改变。</li>
+<li>在根据角标获取元素的时间效率上ArrayList优于 LinkedList，因为数组本身有存储连续，有 index 角标，而 LinkedList 存储元素离散，需要遍历链表。</li>
+<li>不要使用 for 循环去遍历 LinkedList 因为效率很低。</li>
+<li>两者都是线程不安全的，都可以使用 <code>Collections.synchronizedList(List&lt;E&gt; list)</code> 方法生成一个线程安全的 List。</li>
+</ol>
+</li>
+<li><strong>ArrayList 与 Vector 区别（为什么要用Arraylist取代Vector呢？）</strong><ol>
+<li>ArrayList 的扩容机制由于 Vector ， ArrayList 每次 resize 增加 1.5 倍的容量，Vector 每次增加 2倍的容量，在存储大量元素后扩容的时候就能有很大的空间节省。</li>
+<li>Vector 添加删除方法以及迭代器遍历的方法都是 synchronized 修饰的方法，在线程安全的情况下使用效率低于 ArrayList</li>
+<li>ArrayList 和 LinkedList 通过<code>Collections.synchronizedList(List&lt;E&gt; list)</code> 的线程同步的集合，迭代器并不同步，需要使用者去加锁。</li>
+</ol>
+</li>
+<li><strong>简述 HashMap 的工作原理 JDK 1.8后做了哪些优化</strong><ol>
+<li>JDK 1.7 HashMap 底层采用单链表 + 数组的存储结构存储元素（键值对）。JDK1.8之后 HashMap 在同一哈希桶中节点数量（单链表长度）超过 8之后会使用 红黑树替换单链表来提高效率</li>
+<li>HashMap 通过键值对的 key 的 hashCode 值经过扰动函数处理后确定存储的数组角标位置，1.7 中扰动函数使用了 4次位运算 + 5次异或运算，1.8 中降低到 1次位运算 + 1次异或运运算</li>
+<li>HashMap 扩容的时候会增加原来数组长度两倍，并对所存储的元素节点hash 值的重新计算，1.7中 HashMap 会重新调用 hash 函数计算新的位置，而 1.8中对此进行了优化通过 <code>(e.hash &amp; oldCap) == 0</code> 来确定节点新位置是位于扩容前的角标还是之前的 2倍角标位置。</li>
+<li>HashMap 在多线程使用前提下，扩容的时候可能会导致循环链表的情况，当然我们不应在线程不安全的情况下使用 HashMap</li>
+</ol>
+</li>
+<li><strong>HashMap 和 HashTable 的区别</strong><ol>
+<li><code>HashMap</code> 是线程不安全的，HashTable是线程安全的。</li>
+<li><code>HashMap</code> 允许 key 和 Vale 是 null，但是只允许一个 key 为 null,且这个元素存放在哈希表 0 角标位置。 <code>HashTable</code> 不允许key、value 是 null</li>
+<li><code>HashMap</code> 内部使用<code>hash(Object key)</code>扰动函数对 key 的 <code>hashCode</code> 进行扰动后作为 <code>hash</code> 值。<code>HashTable</code> 是直接使用 key 的 <code>hashCode()</code> 返回值作为 hash 值。</li>
+<li><code>HashMap</code>默认容量为 2^4 且容量一定是 2^n ; <code>HashTable</code> 默认容量是11,不一定是 2^n</li>
+<li><code>HashTable</code> 取哈希桶下标是直接用模运算,扩容时新容量是原来的2倍+1。<code>HashMap</code> 在扩容的时候是原来的两倍，且哈希桶的下标使用 &amp;运算代替了取模。</li>
+</ol>
+</li>
+<li><strong>HashMap 和 LinkedHashMap 的区别</strong><ol>
+<li>LinkedHashMap 拥有与 HashMap 相同的底层哈希表结构，即数组 + 单链表 + 红黑树，也拥有相同的扩容机制。</li>
+<li>LinkedHashMap 相比 HashMap 的拉链式存储结构，内部额外通过 Entry 维护了一个双向链表。</li>
+<li>HashMap 元素的遍历顺序不一定与元素的插入顺序相同，而 LinkedHashMap 则通过遍历双向链表来获取元素，所以遍历顺序在一定条件下等于插入顺序。</li>
+<li>LinkedHashMap 可以通过构造参数 accessOrder 来指定双向链表是否在元素被访问后改变其在双向链表中的位置。</li>
+</ol>
+</li>
+<li><strong>HashSet 如何检查重复,与 HashMap 的关系？</strong><ol>
+<li>HashSet 内部使用 HashMap 存储元素，对应的键值对的键为 Set 的存储元素，值为一个默认的 Object 对象。</li>
+<li>HashSet 通过存储元素的 hashCode 方法和 equals 方法来确定元素是否重复。</li>
+</ol>
+</li>
+<li>是否了解 <code>fast-fail</code> 规则 简单说明一下<ol>
+<li>快速失败（fail—fast）在用迭代器遍历一个集合对象时，如果遍历过程中集合对象中的内容发生了修改（增加、删除、修改），则会抛出<code>ConcurrentModificationException</code>。</li>
+<li>迭代器在遍历时直接访问集合中的内容，并且在遍历过程中使用一个 <code>modCount</code> 变量。集合在被遍历期间如果内容发生变化，就会改变 <code>modCount</code> 的值。每当迭代器使用<code>hasNext()/next()</code> 遍历下一个元素之前，都会检测 <code>modCount</code> 变量是否为<code>expectedmodCount</code> 值，是的话就返回遍历值；否则抛出异常，终止遍历。</li>
+<li>场景：java.util包下的集合类都是快速失败的，不能在多线程下发生并发修改（迭代过程中被修改）。</li>
+</ol>
+</li>
+<li><strong>集合在遍历过程中是否可以删除元素，为什么迭代器就可以安全删除元素</strong><ol>
+<li>集合在使用 for 循环或者高级 for 循环迭代的过程中不允许使用，集合本身的 remove 方法删除元素，如果进行错误操作将会导致 <code>ConcurrentModificationException</code>异常的发生</li>
+<li>Iterator 可以删除访问的当前元素(current)，一旦删除的元素是Iterator 对象中 next 所正在引用的，在 Iterator 删除元素通过 修改 modCount 与 expectedModCount 的值，可以使下次在调用 remove 的方法时候两者仍然相同因此不会有异常产生。</li>
+</ol>
+</li>
+</ul>
+
+        
+    </section>
+</article>
+
+
+
+<div class="comments">
+    <div id="disqus_thread">
+        <p class="comment-tips">国内查看评论需要代理~</p>
+    </div>
+    <script>
+    window.disqus_config = function () {
+        this.language = 'zh';
+        this.page.url = 'http://yoursite.com/2018/08/09/面试心经之集合/';
+        this.page.title = '';
+        this.page.identifier = '2018/08/09/面试心经之集合/';
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://name.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+</div>
+        <footer class="footer">
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, Theme by <a href="https://github.com/sanonz/hexo-theme-concise" target="_blank">Concise</a>
+</footer>
+
+<script type="text/javascript" src="//s13.cnzz.com/z_stat.php?id=1234567890&amp;web_id=1234567890"></script>
+
+
+    </div>
+
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.9.0/jquery.min.js"></script>
+    
+    <script type="text/javascript" src="/js/scrollspy.min.js"></script>
+    
+    <script type="text/javascript">
+        $(function() {
+            var nodes = {
+                nav: $('#nav'),
+                aside: $('#aside'),
+                navTags: $('#nav-tags')
+            };
+
+            $('#open-panel, #aside-mask').on('click', function() {
+                nodes.aside.toggleClass('panel-show');
+            });
+            $('#nav-tag').on('click', function(event) {
+                event.preventDefault();console.log(nodes.navTags.attr('class'))
+                nodes.navTags.toggleClass('tag-show');console.log(nodes.navTags.attr('class'))
+            })/*.hover(function() {
+                nodes.navTags.addClass('tag-show');
+            }, function() {
+                nodes.navTags.removeClass('tag-show');
+            });*/
+
+            
+            $(document.body).scrollspy({target: '#aside-inner'});
+            
+        });
+    </script>
+
+</body>
+</html>
